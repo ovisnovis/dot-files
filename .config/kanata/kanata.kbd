@@ -1,7 +1,7 @@
 #| a key to superL |#
 (defsrc 
-a s d f
-j k l ;
+d f
+j k 
 )
 
 (defvar
@@ -10,19 +10,15 @@ hold-time 200
 )
 
 (defalias 
-a-mod (tap-hold $tap-time $tap-time a lmet)
-s-mod (tap-hold $tap-time $tap-time s lalt)
-d-mod (tap-hold $tap-time $tap-time d lsft)
+d-mod (tap-hold $tap-time $tap-time d ralt)
 f-mod (tap-hold $tap-time $tap-time f lctl)
 j-mod (tap-hold $tap-time $tap-time j rctl)
-k-mod (tap-hold $tap-time $tap-time k rsft)
-l-mod (tap-hold $tap-time $tap-time l ralt)
-;-mod (tap-hold $tap-time $tap-time ; rmet)
+k-mod (tap-hold $tap-time $tap-time k lmet)
 )
 
 (deflayer base 
-@a-mod @s-mod @d-mod @f-mod 
-@j-mod @k-mod @l-mod @;-mod
+@d-mod @f-mod 
+@j-mod @k-mod
 )
 
 (defcfg process-unmapped-keys yes)
